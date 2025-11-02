@@ -15,3 +15,18 @@ def char_count(text):
             dic[i] = contor
 
     return dic
+
+
+def sort_on(element):
+    return element["num"]
+
+
+def dic_pair(dictionar):
+    ls = []
+    for item in dictionar:
+        dic = {}
+        dic["char"] = item
+        dic["num"] = dictionar[item]
+        ls.append(dic)
+    ls.sort(reverse=True, key=sort_on)
+    return ls
